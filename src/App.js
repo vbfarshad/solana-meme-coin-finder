@@ -5,7 +5,7 @@ function App() {
 
   useEffect(() => {
     // Fetch new Solana meme coins from Dexscreener API
-    fetch("https://api.dexscreener.com/latest/dex/pairs/solana")
+    fetch("https://api.dexscreener.com/token-profiles/latest/v1")
       .then(response => response.json())
       .then(data => {
         const newMemeCoins = data.pairs.filter(coin => {
