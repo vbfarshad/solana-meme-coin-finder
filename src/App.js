@@ -4,6 +4,7 @@ function App() {
   const [coins, setCoins] = useState([]);
 
   useEffect(() => {
+    // Fetch new Solana meme coins from Dexscreener API
     fetch("https://api.dexscreener.com/latest/dex/pairs/solana")
       .then(response => response.json())
       .then(data => {
