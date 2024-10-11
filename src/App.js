@@ -9,7 +9,7 @@ function App() {
       .then(data => {
         const newMemeCoins = data.pairs.filter(coin => {
           const coinAgeInHours = (Date.now() - new Date(coin.addedTimestamp * 1000)) / 3600000;
-          return coinAgeInHours < 24 && coin.liquidity.usd > 100000;
+          return coinAgeInHours < 24 && coin.liquidity.usd > 10000;
         });
         setCoins(newMemeCoins);
       })
